@@ -1,0 +1,91 @@
+<!-- Create a registration form. The form should have the following fields:
+
+Email
+Password
+Name and Lastname
+Date of birth
+Telephone number
+A select for choosing plans: free plan, a group of 3 plans with increasing price, and a checkbox for a Pro Plan
+Credit card number
+CVC
+Expiration date
+Billing Address -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+    <form>
+        <!-- Email -->
+        <label for="email">Email Address:</label>
+        <input type="email" name="email" id="email" placeholder="Insert Email">
+        <br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <br>
+
+        <!-- First Name -->
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="first_name">
+        <br>
+
+        <!--Last Name -->
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="last_name">
+        <br>
+
+        <!-- Date of Birth -->
+        <label for="dob">When were you born?</label> <br>
+        <input type="date" name="dob" id="dob">
+        <br>
+
+        <!-- Telephone number -->
+        <label for="tel">Phone Number:</label>
+        <input type="tel" name="tel" id="tel">
+        <br>
+
+        <!-- A select for choosing plans: free plan, a group of 3 plans with increasing price, and a checkbox for a Pro Plan -->
+        <div style="border: 1px dashed blue; margin: 5px 0px; width: 200px;">
+            <label for="plan">Choose your plan:</label> 
+            <br>
+            Free: <input type="checkbox" name="plan" id="free"> 
+            <br>
+            Gold: <input type="radio" name="plan" id="premium"> 35€/Month
+            <br>
+            Diamond:<input type="radio" name="plan" id="premium"> 50€/Month
+            <br>
+            Supreme<input type="radio" name="plan" id="premium"> 90€/Month
+            <br>
+        </div>
+
+        <!-- Credit card number, CVC and Expiration Day-->
+        <label for="card">Card Number:</label>
+        <input type="text" maxlength="16">
+        <br>
+        <label for="cvc">CVC:</label>
+        <input type="text" maxlength="3" style="width: 30px;">
+        <br>
+        <label for="expiration">Expiration Date:</label>
+        <input type="date" name="expiration" id="expiration">
+        <br>
+
+        <!-- Billing Address -->
+        <label for="billing">Billing Address:</label>
+        <br>
+        <input type="text" placeholder="Street">
+        <input type="number" name="billing" id="door" placeholder="N." style="width: 40px;">
+        <input type="number" name="billing" id="cap" placeholder="CAP" style="width: 60px;">
+        <br>
+
+    </form>
+
+</body>
+</html>
