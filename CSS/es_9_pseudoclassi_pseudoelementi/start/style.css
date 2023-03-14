@@ -1,0 +1,35 @@
+
+blockquote {
+	background-color: rgba(0, 0, 0, .12);
+	padding: 8px;
+}
+
+blockquote::before, blockquote::after {
+	content: "''";
+	font-weight: bolder;
+}
+
+a {
+	color: darkred;
+	text-decoration: none;
+}
+
+p:first-of-type::first-letter {
+	
+		float: left;
+		color: darkred;
+		border: 3px ridge darkgoldenrod;
+		padding: 16px;
+		background-color: gold;
+		margin: 8px;
+	
+}
+
+a {
+	transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+	transform: scale(1.5);
+	/* color: yellow; */
+}
