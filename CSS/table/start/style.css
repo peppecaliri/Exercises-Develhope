@@ -1,0 +1,42 @@
+table {
+    border: 1px solid black;
+}
+
+th {
+    color: red;
+    /* background-color: black; */
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+thead {
+    background-color: #455a64;
+}
+
+tr:nth-child(odd) {
+    background-color: #eceff1;
+}
+
+tr:nth-child(even) {
+    background-color: #b0bec5;
+}
+
+tfoot > tr > td{
+    font-weight: 800;
+    background-color: #78909c;
+}
+
+tbody > tr > td:nth-of-type(2) {
+    color: red;
+    text-align: right;
+}
+
+tbody > tr > td:nth-of-type(3) {
+    color: blue;
+    text-align: right;
+}
+
+tfoot > tr > td:nth-of-type(2), td:nth-of-type(3) {
+    text-align: right;
+}
