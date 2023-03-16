@@ -55,13 +55,30 @@ input[type="button"]:hover {
     transition: all 100ms;
 }
 
+/* Hamburger Symbol */
+.fa-solid {
+    padding-top: 2vh;
+    padding-right: 2vw;
+    float: right;
+    color: aliceblue;
+    font-size: 1.5em;
+    visibility: hidden;
+}
+
 /* ////////////////////////////////////////////////////////// */
 
-@media (min-width: 768px) {
-    .square {
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        margin: 2px;
+@media (max-width: 600px) {
+    .fa-solid {
+        padding-top: 2vh;
+        padding-right: 5vw;
+        float: right;
+        color: aliceblue;
+        font-size: 1.5em;
+        visibility: visible;
+    }
+
+    ul, li, input {
+        display: none;
+        visibility: hidden;
     }
 }
