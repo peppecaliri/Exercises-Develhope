@@ -26,16 +26,17 @@ li {
     color: rgba(151, 140, 140, 0.8);
 }
 
-h3  {
+h1  {
     color: aliceblue;
+    font-size: xx-large;
     margin-left: 2vw;
     float: left;
-    padding-right: 3vw;
+    padding-right: 4vw;
 }
 
 a {
-    font-size: 0.9em;
-    padding-right: 3vw;
+    font-size: 1.5em;
+    padding-right: 4vw;
     text-decoration: none;
     color: aliceblue;
 }
@@ -47,9 +48,14 @@ a {
 
 input[type="text"] {
     width: 18vw;
+    height: 4vh;
 }
 
-input[type="button"]:hover {
+button {
+    font-size: 2.6vh;
+}
+
+button:hover {
     background-color: green;
     color: white;
     transition: all 100ms;
@@ -61,23 +67,23 @@ input[type="button"]:hover {
     padding-right: 2vw;
     float: right;
     color: aliceblue;
-    font-size: 1.5em;
+    font-size: 2em;
     visibility: hidden;
 }
 
 /* ////////////////////////////////////////////////////////// */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .fa-solid {
-        padding-top: 2vh;
+        padding-top: 3vh;
         padding-right: 5vw;
         float: right;
         color: aliceblue;
-        font-size: 1.5em;
+        font-size: 2.4em;
         visibility: visible;
     }
 
-    ul, li, input {
+    ul, li, input, button {
         display: none;
         visibility: hidden;
     }
