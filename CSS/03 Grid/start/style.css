@@ -135,3 +135,15 @@ p {
     padding-right: 1vw;
     font-size: xx-large;
 }
+
+#plus, #minus, #multiple, #divide {
+    background-color: rgb(200, 200, 200);
+}
+
+/* #plus, #minus, #multiple, #divide:hover {
+    background-color: rgb(180, 180, 180);
+} */
+
+#plus:hover, #minus:hover, #multiple:hover, #divide:hover {
+    background-color: rgb(140, 140, 140);
+}
