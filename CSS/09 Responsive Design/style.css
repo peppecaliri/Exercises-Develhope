@@ -1,35 +1,42 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: darkcyan;
+  background-color: darkcyan;
 }
 
 .card {
-    /* border: 1px solid black; */
-    background: rgb(157,156,175);
-    background: linear-gradient(to bottom, rgba(157,156,175,1) 0%, rgba(103,103,126,1) 16%, rgba(234,246,249,1) 100%);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
-    border-radius: 1rem;
-    width: 20rem;
-    height: 30rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15% 45% 8% 33%;
-    margin: 1rem;
+  /* border: 1px solid black; */
+  background: rgb(157, 156, 175);
+  background: linear-gradient(
+    to bottom,
+    rgba(157, 156, 175, 1) 0%,
+    rgba(103, 103, 126, 1) 16%,
+    rgba(234, 246, 249, 1) 100%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 30rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 45% 8% 33%;
+  margin: 1rem;
 }
 
 /* Card Header */
 
-.container> .card > * {
-    display: flex;
+.container > .card > * {
+  display: flex;
 }
 
 .card-head {
-    align-items: center;
+  align-items: center;
 }
 
 /* .card-picture {
@@ -37,7 +44,7 @@ body {
 } */
 
 .card-symbols {
-    align-items: center;
+  align-items: center;
 }
 
 /* .card-paragraph {
@@ -45,73 +52,78 @@ body {
 } */
 
 .head-avatar {
-    border-radius: 100%;
-    height: 90%;
-    width: 20%;
-    margin: 0px 0.5rem;
-    background-image: url(avatar.jpg);
-    background-position: center;
-    background-size: cover;
+  border-radius: 100%;
+  height: 90%;
+  width: 20%;
+  margin: 0px 0.5rem;
+  background-image: url(avatar.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .head-person {
-    display: grid;
-    width: 50%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50% 50%;
-    gap: 0.3rem;
+  display: grid;
+  width: 50%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50% 50%;
+  gap: 0.3rem;
 }
 
 .card-head > i {
-    margin-left: auto;
-    padding-right: 1rem;
-    font-size: xx-large;
+  margin-left: auto;
+  padding-right: 1rem;
+  font-size: xx-large;
 }
 
 /* Card Body */
 
 .card-picture-one {
-    background-image: url(cat1.jpg);
-    background-position: center;
-    background-size: cover;
+  background-image: url(cat1.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .card-picture-two {
-    background-image: url(cat2.jpg);
-    background-position: center;
-    background-size: cover;
+  background-image: url(cat2.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .card-picture-three {
-    background-image: url(cat3.jpg);
-    background-position: center;
-    background-size: cover;
+  background-image: url(cat3.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .card-symbols > i {
-    font-size: larger;
-    margin: 0px 0.5rem;
+  font-size: larger;
+  margin: 0px 0.5rem;
 }
 
 em {
-    color: white;
+  color: white;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .card {
+    width: 85%;
+  }
 }
 
 @media (max-width: 375px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
