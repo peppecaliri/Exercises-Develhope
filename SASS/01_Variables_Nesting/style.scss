@@ -1,1 +1,33 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+$border: 1px solid;
 
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    border: $border $color-primary;
+
+    h1 {
+        color: $color-tertiary;
+        border-bottom: $border $color-secondary;
+    }
+
+    section {
+        display: flex;
+        width: 98%;
+        align-items: center;
+        article {
+           border: $border $color-tertiary;
+           &:nth-child(odd) p {
+            color: $color-secondary;
+           }
+           &:nth-child(even) p {
+            color: $color-primary;
+           }
+        }
+    }
+}
