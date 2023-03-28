@@ -1,0 +1,51 @@
+$primary: green;
+$secondary: blue;
+$tertiary: red;
+$main_border: 1px solid;
+
+@mixin article_style ($color, $border-color, $font-size) {
+    color: $color;
+    border: $main_border;
+    border-color: $border-color;
+    font-size: $font-size;
+}
+
+.container {
+    border: $main_border black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+        color: $primary;
+        text-align: center;
+        border-bottom: 1px solid $secondary;
+    }
+
+    .first-section {
+        display: flex;
+        justify-content: center;
+
+        article {
+            &:nth-child(odd) {
+              @include article_style($secondary, $primary, 1rem)
+            }
+            &:nth-child(even) {
+                @include article_style($tertiary, $primary, 1rem)
+            }
+        }
+       
+    }
+
+    .second-section {
+        padding: 1rem;
+        display: flex;
+        width: 100%;
+        article {
+            width: 100%;
+            @include article_style($primary, $secondary, 1.5rem)
+        }
+    }
+}
+
