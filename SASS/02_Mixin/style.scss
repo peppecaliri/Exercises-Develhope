@@ -3,7 +3,7 @@ $secondary: blue;
 $tertiary: red;
 $main_border: 1px solid;
 
-@mixin article_style ($color, $border-color, $font-size) {
+@mixin article_style ($color, $border-color, $font-size: 1rem) {
     color: $color;
     border: $main_border;
     border-color: $border-color;
@@ -29,10 +29,10 @@ $main_border: 1px solid;
 
         article {
             &:nth-child(odd) {
-              @include article_style($secondary, $primary, 1rem)
+              @include article_style($secondary, $primary)
             }
             &:nth-child(even) {
-                @include article_style($tertiary, $primary, 1rem)
+                @include article_style($tertiary, $primary)
             }
         }
        
