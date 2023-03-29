@@ -1,0 +1,50 @@
+@use "my_module.scss" as mm;
+@use "my_function.scss" as f;
+
+@mixin article_style ($color, $border-color, $font-size: 1rem) {
+    color: $color;
+    border: mm.$main_border;
+    border-color: $border-color;
+    font-size: $font-size;
+}
+
+.container {
+    border: mm.$main_border black;
+    padding: f.pxToRem(16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+        color: mm.$primary;
+        text-align: center;
+        border-bottom: 1px solid mm.$secondary;
+    }
+
+    .first-section {
+        display: flex;
+        justify-content: center;
+
+        article {
+            &:nth-child(odd) {
+              @include article_style(mm.$secondary, mm.$primary)
+            }
+            &:nth-child(even) {
+                @include article_style(mm.$tertiary, mm.$primary)
+            }
+        }
+       
+    }
+
+    .second-section {
+        padding: f.pxToRem(16);
+        display: flex;
+        width: 100%;
+        article {
+            width: 100%;
+            @include article_style(mm.$primary, mm.$secondary, f.pxToRem(28))
+        }
+    }
+}
+
+
