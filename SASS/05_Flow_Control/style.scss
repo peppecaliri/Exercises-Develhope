@@ -53,8 +53,8 @@
     @for $var from 1 through 20 {
         .squares div:nth-child(#{$var}) {
             border: 1px solid red;
-            width: 45px;
-            height: 45px; 
+            width: f.pxToRem(45);
+            height: f.pxToRem(45); 
             background-color: darken($basecolor, $var * 5%);
             color: lighten($textcolor, $var * 5%);
 
