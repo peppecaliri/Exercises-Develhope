@@ -52,6 +52,7 @@
     }
     @for $var from 1 through 20 {
         .squares div:nth-child(#{$var}) {
+            display: flex;
             border: 1px solid red;
             width: f.pxToRem(45);
             height: f.pxToRem(45); 

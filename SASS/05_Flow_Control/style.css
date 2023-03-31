@@ -39,144 +39,164 @@
   justify-content: space-between;
 }
 .container .squares div:nth-child(1) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #f2f2f2;
   color: #0d0d0d;
 }
 .container .squares div:nth-child(2) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #e6e6e6;
   color: #1a1a1a;
 }
 .container .squares div:nth-child(3) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #d9d9d9;
   color: #262626;
 }
 .container .squares div:nth-child(4) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #cccccc;
   color: #333333;
 }
 .container .squares div:nth-child(5) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #bfbfbf;
   color: #404040;
 }
 .container .squares div:nth-child(6) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #b3b3b3;
   color: #4d4d4d;
 }
 .container .squares div:nth-child(7) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #a6a6a6;
   color: #595959;
 }
 .container .squares div:nth-child(8) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #999999;
   color: #666666;
 }
 .container .squares div:nth-child(9) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #8c8c8c;
   color: #737373;
 }
 .container .squares div:nth-child(10) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: gray;
   color: gray;
   background-color: blue;
   color: red;
 }
 .container .squares div:nth-child(11) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #737373;
   color: #8c8c8c;
 }
 .container .squares div:nth-child(12) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #666666;
   color: #999999;
 }
 .container .squares div:nth-child(13) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #595959;
   color: #a6a6a6;
 }
 .container .squares div:nth-child(14) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #4d4d4d;
   color: #b3b3b3;
 }
 .container .squares div:nth-child(15) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #404040;
   color: #bfbfbf;
 }
 .container .squares div:nth-child(16) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #333333;
   color: #cccccc;
 }
 .container .squares div:nth-child(17) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #262626;
   color: #d9d9d9;
 }
 .container .squares div:nth-child(18) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #1a1a1a;
   color: #e6e6e6;
 }
 .container .squares div:nth-child(19) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: #0d0d0d;
   color: #f2f2f2;
 }
 .container .squares div:nth-child(20) {
+  display: flex;
   border: 1px solid red;
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   background-color: black;
   color: white;
 }
