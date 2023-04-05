@@ -1,8 +1,5 @@
 let nicknameMap = (persons) => {
-  let people = [];
-  persons.map((person) => {
-    people.push(person.name + " - " + person.age);
-  });
+  let people = persons.map((person) => person.name + " - " + person.age);
   return people;
 };
 
