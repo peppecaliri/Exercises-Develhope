@@ -27,5 +27,4 @@ function secondPromise(result) {
 
 firstPromise()
   .then(secondPromise)
-  .then((val) => console.log(val))
-  .catch((err) => console.log(err));
+  .then((val) => console.log(val));
