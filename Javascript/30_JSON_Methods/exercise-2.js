@@ -7,7 +7,8 @@ class Person {
   }
 
   static fromJson(json) {
-    return JSON.parse(json);
+    const obj = JSON.parse(json);
+    return new Person(obj.id, obj.firstName, obj.lastName, obj.age);
   }
 
   toJson() {
