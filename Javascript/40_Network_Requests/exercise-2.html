@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center"></div>
+  </body>
+</html>
+
+<script>
+  async function getData(url) {
+    const res = await fetch(url);
+    const json = await res.json();
+    let h2 = document.createElement("h2");
+    h2.innerText = json.title;
+    let container = document.getElementById("container");
+    container.appendChild(h2);
+    let checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = json.completed;
+    container.appendChild(checkbox);
+  }
+  getData("https://jsonplaceholder.typicode.com/todos/4");
+</script>
