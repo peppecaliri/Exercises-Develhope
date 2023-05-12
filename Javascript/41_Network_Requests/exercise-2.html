@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center"></div>
+  </body>
+</html>
+
+<script>
+  async function getData(url) {
+    const res = await fetch(url);
+    const json = await res.json();
+    let container = document.getElementById("container");
+    let ul = document.createElement("ul");
+    container.appendChild(ul);
+    json.forEach((todo) => {
+      let li = document.createElement("li");
+      li.textContent = todo.title;
+      ul.appendChild(li);
+    });
+  }
+
+  getData("https://jsonplaceholder.typicode.com/todos");
+</script>
