@@ -9,5 +9,4 @@ class Age extends React.Component {
     );
   }
 }
-
 export default Age;
