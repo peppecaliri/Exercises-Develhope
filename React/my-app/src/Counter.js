@@ -19,10 +19,16 @@ class Counter extends React.Component {
   render() {
     return (
       <div>
-        <CounterDisplay />
+        <CounterDisplay display={this.state.count} />
       </div>
     );
   }
 }
+
+Counter.defaultProps = {
+  initial: 10,
+  increment: 2,
+  interval: 3000,
+};
 
 export default Counter;
