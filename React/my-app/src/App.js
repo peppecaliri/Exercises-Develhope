@@ -3,7 +3,7 @@ import Hello from "./Hello";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
 
-class CreateDiv extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -15,4 +15,4 @@ class CreateDiv extends React.Component {
   }
 }
 
-export default CreateDiv;
+export default App;
