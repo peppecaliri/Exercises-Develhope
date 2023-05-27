@@ -7,7 +7,7 @@ class CreateDiv extends React.Component {
     return (
       <div>
         <Hello />
-        <Welcome name="John" age={28} />
+        <Welcome name="John" age={15} />
       </div>
     );
   }
