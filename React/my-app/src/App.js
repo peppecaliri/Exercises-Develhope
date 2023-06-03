@@ -5,8 +5,13 @@ import Counter from "./Counter";
 import ClickCounter from "./ClickCounter";
 import ClickTracker from "./ClickTracker";
 import InteractiveWelcome from "./InteractiveWelcome";
+import Login from "./Login";
 
 class App extends React.Component {
+  state = {
+    logged: false,
+  };
+
   render() {
     return (
       <div>
@@ -15,8 +20,10 @@ class App extends React.Component {
         <Counter />
         <ClickCounter />
         <ClickTracker />
-
+        <hr />
         <InteractiveWelcome />
+
+        <Login />
       </div>
     );
   }
