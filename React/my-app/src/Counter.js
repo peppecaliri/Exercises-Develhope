@@ -29,8 +29,8 @@ class Counter extends React.Component {
 
 Counter.defaultProps = {
   initial: 10,
-  increment: 2,
-  interval: 3000,
+  increment: 1,
+  interval: 1000,
 };
 
 export default Counter;
