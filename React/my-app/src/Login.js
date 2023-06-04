@@ -31,6 +31,14 @@ class Login extends React.Component {
     event.preventDefault();
   };
 
+  handleReset = (event) => {
+    event.preventDefault();
+    this.setState({
+      username: "",
+      password: "",
+    });
+  };
+
   render() {
     return (
       <div>
@@ -52,6 +60,7 @@ class Login extends React.Component {
             id="btnSubmit"
             disabled
           />
+          <button onChange={this.handleReset}>Reset</button>
         </form>
       </div>
     );
