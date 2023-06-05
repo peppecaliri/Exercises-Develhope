@@ -21,12 +21,26 @@ class TodoList extends React.Component {
     });
   };
 
+  removeLiItem = (event) => {
+    event.preventDefault();
+
+    let toRemove = event.target.id;
+    this.setState({
+      items: this.state.items.filter((el) => el !== toRemove),
+    });
+  };
+
   render() {
     return (
       <div>
         <ul>
           {this.state.items.map((item) => (
-            <li>{item}</li>
+            <li id={item}>
+              {item}
+              <button id={item} onClick={this.removeLiItem}>
+                remove
+              </button>
+            </li>
           ))}
         </ul>
         <input type="text" name="search" id="searchbox" />
