@@ -15,6 +15,12 @@ class TodoList extends React.Component {
     searchbox.value = "";
   };
 
+  resetList = () => {
+    this.setState({
+      items: [],
+    });
+  };
+
   render() {
     return (
       <div>
@@ -25,6 +31,7 @@ class TodoList extends React.Component {
         </ul>
         <input type="text" name="search" id="searchbox" />
         <button onClick={this.addItem}>Add</button>
+        <button onClick={this.resetList}>Reset</button>
       </div>
     );
   }
