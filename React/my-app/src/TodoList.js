@@ -8,9 +8,13 @@ class TodoList extends React.Component {
   addItem = () => {
     let searchbox = document.getElementById("searchbox");
 
-    this.setState({
-      items: [...this.state.items, searchbox.value],
-    });
+    if (this.state.items.includes(searchbox.value) === false) {
+      this.setState({
+        items: [...this.state.items, searchbox.value],
+      });
+    } else {
+      alert(`${searchbox.value} is already in your list`);
+    }
 
     searchbox.value = "";
   };
@@ -25,6 +29,7 @@ class TodoList extends React.Component {
     event.preventDefault();
 
     let toRemove = event.target.id;
+
     this.setState({
       items: this.state.items.filter((el) => el !== toRemove),
     });
