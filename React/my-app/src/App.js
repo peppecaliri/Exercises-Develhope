@@ -19,7 +19,9 @@ class App extends React.Component {
         <Hello />
         <Welcome name="John" age={15} />
         <Counter />
+        <hr />
         <ClickCounter />
+        <hr />
         <ClickTracker />
         <hr />
         <InteractiveWelcome />

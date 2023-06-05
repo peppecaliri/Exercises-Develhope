@@ -19,6 +19,7 @@ class UncontrolledLogin extends React.Component {
           name="username"
           id="username"
           onChange={this.handleInputUnc}
+          autoFocus
         />
         <input
           type="password"
