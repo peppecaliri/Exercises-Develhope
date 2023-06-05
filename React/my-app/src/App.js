@@ -6,6 +6,7 @@ import ClickCounter from "./ClickCounter";
 import ClickTracker from "./ClickTracker";
 import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
+import UncontrolledLogin from "./UncontrolledLogin";
 
 class App extends React.Component {
   state = {
@@ -24,6 +25,8 @@ class App extends React.Component {
         <InteractiveWelcome />
 
         <Login />
+        <hr></hr>
+        <UncontrolledLogin />
       </div>
     );
   }
