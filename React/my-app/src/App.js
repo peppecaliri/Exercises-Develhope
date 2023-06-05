@@ -31,7 +31,22 @@ class App extends React.Component {
         <hr></hr>
         <UncontrolledLogin />
         <hr />
-        <TodoList />
+        <TodoList
+          render={(items, removeLi) => {
+            return (
+              <div>
+                {items.map((item) => (
+                  <li id={item}>
+                    {item}
+                    <button id={item} onClick={removeLi}>
+                      remove
+                    </button>
+                  </li>
+                ))}
+              </div>
+            );
+          }}
+        ></TodoList>
       </div>
     );
   }

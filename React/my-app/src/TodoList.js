@@ -38,16 +38,7 @@ class TodoList extends React.Component {
   render() {
     return (
       <div>
-        <ul>
-          {this.state.items.map((item) => (
-            <li id={item}>
-              {item}
-              <button id={item} onClick={this.removeLiItem}>
-                remove
-              </button>
-            </li>
-          ))}
-        </ul>
+        <ul>{this.props.render(this.state.items, this.removeLiItem)}</ul>
         <input type="text" name="search" id="searchbox" />
         <button onClick={this.addItem}>Add</button>
         <button onClick={this.resetList}>Reset</button>
@@ -55,6 +46,17 @@ class TodoList extends React.Component {
     );
   }
 }
+
+/* 
+{this.state.items.map((item) => (
+            <li id={item}>
+              {item}
+              <button id={item} onClick={this.removeLiItem}>
+                remove
+              </button>
+            </li>
+          ))}
+*/
 
 export default TodoList;
 
