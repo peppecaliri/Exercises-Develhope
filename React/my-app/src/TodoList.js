@@ -11,6 +11,8 @@ class TodoList extends React.Component {
     this.setState({
       items: [...this.state.items, searchbox.value],
     });
+
+    searchbox.value = "";
   };
 
   render() {
