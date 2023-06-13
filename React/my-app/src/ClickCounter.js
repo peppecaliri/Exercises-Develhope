@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function ClickCounter({ initialValue = 0 }) {
+export default function ClickCounter({ initialValue = 0, func }) {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    func();
+  }, [count]);
+
   function handleClick() {
     setCount((c) => c + 1);
   }

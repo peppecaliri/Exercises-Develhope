@@ -21,7 +21,11 @@ class App extends React.Component {
         <Welcome name="John" age={15} />
         <Counter />
         <hr />
-        <ClickCounter />
+        <ClickCounter
+          func={() => {
+            console.log(`ciao`);
+          }}
+        />
         <hr />
         <ClickTracker />
         <hr />
