@@ -1,70 +1,59 @@
-/*Add a "login" button to the Login component. This button should be disabled as long as the username and password 
-inputs are empty. When clicked, the event handler attached to the button should call an onLogin function passed 
-as a prop to the Login component, passing it the state.
+/*Rewrite the Login component as a function component, and use the useState hook to track the state of the username, password and remember inputs. 
+Tip: you can use useState more than once.
  */
 
-import React from "react";
+import { useState } from "react";
 
-class Login extends React.Component {
-  state = {
-    username: "",
-    password: "",
-  };
+export default function Login() {
+  const [username, handleUsername] = useState("");
+  const [password, handlePassword] = useState("");
 
-  handleInputChange = (event) => {
+  function handleInput(event) {
     event.preventDefault();
     let name = event.target.name;
     let value = event.target.value;
+
     let button = document.getElementById("btnSubmit");
-    this.setState({
-      [name]: value,
-    });
 
-    if (this.state.username.length > 1 && this.state.password.length > 1) {
-      button.disabled = false;
+    if (name === "username") {
+      handleUsername(value);
+      console.log(username);
+      if (username.length > 1 && password.length > 1) {
+        button.disabled = false;
+      } else {
+        button.disabled = true;
+      }
     } else {
-      button.disabled = true;
+      handlePassword(value);
+      console.log(password);
+      if (username.length > 1 && password.length > 1) {
+        button.disabled = false;
+      } else {
+        button.disabled = true;
+      }
     }
-  };
-
-  onLogin = (event) => {
-    event.preventDefault();
-  };
-
-  handleReset = (event) => {
-    event.preventDefault();
-    this.setState({
-      username: "",
-      password: "",
-    });
-  };
-
-  render() {
-    return (
-      <div>
-        <form>
-          <input
-            type="text"
-            name="username"
-            onChange={this.handleInputChange}
-          />
-          <input
-            type="password"
-            name="password"
-            onChange={this.handleInputChange}
-          />
-          <input
-            type="submit"
-            name="submit"
-            onClick={this.onLogin}
-            id="btnSubmit"
-            disabled
-          />
-          <button onChange={this.handleReset}>Reset</button>
-        </form>
-      </div>
-    );
   }
-}
 
-export default Login;
+  function handleReset(event) {
+    event.preventDefault();
+    handleUsername("");
+    handlePassword("");
+  }
+
+  return (
+    <div>
+      <form>
+        <input type="text" name="username" onChange={handleInput} />
+        <input type="password" name="password" onChange={handleInput} />
+        <input
+          type="submit"
+          name="submit"
+          // onClick={this.onLogin}
+          id="btnSubmit"
+          disabled
+        />
+        <button onChange={handleReset}>Reset</button>
+      </form>
+    </div>
+  );
+}
