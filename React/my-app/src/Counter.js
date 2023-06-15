@@ -14,7 +14,7 @@ export default function Counter({ initial = 0 }) {
 
       clearInterval(startInt);
     };
-  });
+  }, []);
 
   return (
     <div>

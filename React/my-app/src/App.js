@@ -1,44 +1,17 @@
-import React from "react";
 import Hello from "./Hello";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
-import ClickCounter from "./ClickCounter";
-import ClickTracker from "./ClickTracker";
-import InteractiveWelcome from "./InteractiveWelcome";
-import Login from "./Login";
-import UncontrolledLogin from "./UncontrolledLogin";
-import TodoList from "./TodoList";
 
-class App extends React.Component {
-  state = {
-    logged: false,
-  };
+import { GithubUser } from "./GithubUser";
 
-  render() {
-    return (
-      <div>
-        <Hello />
-        <Welcome name="John" age={15} />
-        <Counter />
-        <hr />
-        <ClickCounter
-          func={() => {
-            console.log(`ciao`);
-          }}
-        />
-        <hr />
-        <ClickTracker />
-        <hr />
-        <InteractiveWelcome />
+export default function App() {
+  return (
+    <div>
+      <Hello />
+      <Welcome name="John" age={15} />
+      <Counter />
 
-        <Login />
-        <hr></hr>
-        <UncontrolledLogin />
-        <hr />
-        <TodoList />
-      </div>
-    );
-  }
+      <GithubUser username="peppecaliri" />
+    </div>
+  );
 }
-
-export default App;
