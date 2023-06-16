@@ -2,7 +2,8 @@ import Hello from "./Hello";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
 
-import { GithubUser } from "./GithubUser";
+// import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 
 export default function App() {
   return (
@@ -11,7 +12,8 @@ export default function App() {
       <Welcome name="John" age={15} />
       <Counter />
 
-      <GithubUser username="peppecaliri" />
+      <GithubUserList />
+      {/* <GithubUser username="peppecaliri" /> */}
     </div>
   );
 }
