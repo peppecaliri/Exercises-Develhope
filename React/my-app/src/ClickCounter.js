@@ -7,8 +7,8 @@ export default function ClickCounter() {
     <div>
       <h1>{count}</h1>
       <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Increment</button>
-      <button onClick={handleReset}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }
