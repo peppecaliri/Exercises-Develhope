@@ -1,7 +1,7 @@
 import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser({ username }) {
-  const { data } = useGithubUser(username);
+  const { data, loading, error } = useGithubUser(username);
 
   return (
     <div
@@ -16,6 +16,7 @@ export function GithubUser({ username }) {
       }}
     >
       <h1>{data && data.login}</h1>
+      {loading && <h2>Loading...</h2>}
       {data && <img src={data.avatar_url} alt="" style={{ width: 200 }} />}
     </div>
   );
