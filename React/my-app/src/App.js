@@ -10,6 +10,7 @@ import { CarDetails } from "./CarDetails";
 import { useState } from "react";
 import LanguageContext from "./CreateContext";
 import { DisplayLanguage } from "./DisplayLanguage";
+import { FilteredList } from "./FilteredList";
 export default function App() {
   const [language, setLanguage] = useState("en");
 
@@ -34,6 +35,14 @@ export default function App() {
       <GithubUserList />
       <ClickCounter initialValue={0} />
       <CarDetails />
+      <hr />
+      <FilteredList
+        people={[
+          { id: 1, name: "pippo", age: 28 },
+          { id: 2, name: "pappo", age: 16 },
+          { id: 2, name: "peppo", age: 12 },
+        ]}
+      />
       {/* <GithubUser username="peppecaliri" /> */}
     </div>
   );
