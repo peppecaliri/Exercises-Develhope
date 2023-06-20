@@ -4,11 +4,12 @@ import Welcome from "./Welcome";
 import Counter from "./Counter";
 // import ClickCounter from "./ClickCounter";
 // import { useForm } from "./useForm";
-// import { GithubUser } from "./GithubUser";
-// import { GithubUserList } from "./GithubUserList";
+import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 // import { CarDetails } from "./CarDetails";
 import { useState } from "react";
 import LanguageContext from "./CreateContext";
+import { ShowGithubUser } from "./ShowGithubUser";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { Route, Routes } from "react-router-dom";
 // import { FilteredList } from "./FilteredList";
@@ -34,6 +35,7 @@ export default function App() {
 
       <Routes>
         <Route path="/counter" element={<Counter />} />
+        <Route path="/users/:username" element={<ShowGithubUser />} />
       </Routes>
 
       {/* <Login />
