@@ -1,16 +1,17 @@
 import Hello from "./Hello";
-import Login from "./Login";
+// import Login from "./Login";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
-import ClickCounter from "./ClickCounter";
-import { useForm } from "./useForm";
+// import ClickCounter from "./ClickCounter";
+// import { useForm } from "./useForm";
 // import { GithubUser } from "./GithubUser";
-import { GithubUserList } from "./GithubUserList";
-import { CarDetails } from "./CarDetails";
+// import { GithubUserList } from "./GithubUserList";
+// import { CarDetails } from "./CarDetails";
 import { useState } from "react";
 import LanguageContext from "./CreateContext";
 import { DisplayLanguage } from "./DisplayLanguage";
-import { FilteredList } from "./FilteredList";
+import { Route, Routes } from "react-router-dom";
+// import { FilteredList } from "./FilteredList";
 export default function App() {
   const [language, setLanguage] = useState("en");
 
@@ -30,8 +31,12 @@ export default function App() {
       </LanguageContext.Provider>
       <Hello />
       <Welcome name="John" age={15} />
-      <Counter />
-      <Login />
+
+      <Routes>
+        <Route path="/counter" element={<Counter />} />
+      </Routes>
+
+      {/* <Login />
       <GithubUserList />
       <ClickCounter initialValue={0} />
       <CarDetails />
@@ -42,8 +47,7 @@ export default function App() {
           { id: 2, name: "pappo", age: 16 },
           { id: 2, name: "peppo", age: 12 },
         ]}
-      />
-      {/* <GithubUser username="peppecaliri" /> */}
+      /> */}
     </div>
   );
 }
