@@ -1,10 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import useSwr from "swr";
 
 export function ShowGithubUser() {
   const { username = "peppecaliri" } = useParams();
 
   const [fetchData, setFetchData] = useState({});
+  const [data, onFetch] = useSwr(username);
+
+  function handleGetUserData() {
+    onFetch();
+  }
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}`)
@@ -29,6 +35,8 @@ export function ShowGithubUser() {
       {fetchData && (
         <img src={fetchData.avatar_url} alt="" style={{ width: 200 }} />
       )}
+
+      <button onClick={handleGetUserData}>Update</button>
     </div>
   );
 }
