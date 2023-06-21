@@ -1,36 +1,27 @@
-import { useState, useEffect } from "react";
-import { GithubUser } from "./GithubUser";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function GithubUserList() {
-  const [data, setData] = useState("");
-  const [usernames, setUsernames] = useState([]);
+  const [gitName, setGitName] = useState("");
 
-  function handleInput(event) {
+  function handleName(event) {
     const value = event.target.value;
-    setData(value);
+    setGitName(value);
   }
 
-  function addUser() {
-    setUsernames([...usernames, data]);
-  }
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
-  useEffect(() => {
-    console.log(usernames);
-  }, [usernames]);
-
+  console.log(gitName);
   return (
     <div>
-      <input value={data} type="text" name="username" onChange={handleInput} />
-      <button onClick={addUser}>Search User</button>
-      <div style={{ display: "flex" }}>
-        {usernames.map((user) => (
-          <GithubUser username={user} />
-        ))}
-      </div>
+      <form action="">
+        <label htmlFor="gitName">Search User</label>
+        <input
+          value={gitName}
+          type="text"
+          name="username"
+          onChange={handleName}
+        />
+      </form>
+      <Link to={`/users/${gitName}`}>Search User</Link>
     </div>
   );
 }
