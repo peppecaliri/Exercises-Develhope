@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CounterDisplay from "./CounterDisplay";
+import { Link } from "react-router-dom";
 
 export default function Counter({ initial = 0 }) {
   const [count, setCount] = useState(initial);
@@ -18,6 +19,7 @@ export default function Counter({ initial = 0 }) {
 
   return (
     <div>
+      <Link to="/">Go to homepage</Link>
       <CounterDisplay display={count} />
     </div>
   );

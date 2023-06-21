@@ -12,6 +12,7 @@ import LanguageContext from "./CreateContext";
 import { ShowGithubUser } from "./ShowGithubUser";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { Route, Routes } from "react-router-dom";
+import { Nav } from "./Nav";
 // import { FilteredList } from "./FilteredList";
 export default function App() {
   const [language, setLanguage] = useState("en");
@@ -36,6 +37,7 @@ export default function App() {
       <Routes>
         <Route path="/counter" element={<Counter />} />
         <Route path="/users/:username" element={<ShowGithubUser />} />
+        <Route path="/" element={<Nav />} />
       </Routes>
 
       {/* <Login />
