@@ -38,6 +38,7 @@ export default function App() {
         <Route path="/counter" element={<Counter />} />
         <Route path="/users/:username" element={<ShowGithubUser />} />
         <Route path="/" element={<Nav />} />
+        <Route path="/*" element={<h1>Page not Found</h1>} />
       </Routes>
 
       {/* <Login />
