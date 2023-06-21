@@ -9,7 +9,7 @@ export function useSwr(username = "vasco") {
   );
 
   return {
-    data,
+    data: data ? data : null,
     error,
   };
 }
