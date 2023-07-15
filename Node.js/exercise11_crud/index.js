@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Express = require("express");
+require("express-async-errors");
+var planets_1 = require("./controllers/planets");
+var app = Express();
+app.use(Express.json());
+app.get("/api/planets", planets_1.getAll);
+app.get("/api/planets/:id", planets_1.getOneById);
+app.post("/api/planets", planets_1.create);
+app.put("/api/planets/:id", planets_1.updateById);
+app.delete("/api/planets/:id", planets_1.deleteById);
+app.listen(3001);
