@@ -21,6 +21,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteById = exports.updateById = exports.create = exports.getOneById = exports.getAll = void 0;
+var joi_1 = require("joi");
 var planets = [
     {
         id: 1,
@@ -41,10 +42,21 @@ var getOneById = function (req, res) {
     res.status(200).json(planet);
 };
 exports.getOneById = getOneById;
+var planetSchema = joi_1.Joi.object({
+    id: joi_1.Joi.number().integer().required(),
+    name: joi_1.Joi.string().required(),
+});
 var create = function (req, res) {
     var _a = req.body, id = _a.id, name = _a.name;
-    var NewPlanet = { id: id, name: name };
-    planets = __spreadArray(__spreadArray([], planets, true), [NewPlanet], false);
+    var newPlanet = { id: id, name: name };
+    planets = __spreadArray(__spreadArray([], planets, true), [newPlanet], false);
+    var validateNewPlanet = planetSchema.validate(newPlanet);
+    if (validateNewPlanet.error) {
+        return res.status(400).json({ msg: validateNewPlanet.error });
+    }
+    else {
+        planets = __spreadArray(__spreadArray([], planets, true), [newPlanet], false);
+    }
     res.status(200).json({ msg: "Planet created" });
 };
 exports.create = create;
