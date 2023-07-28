@@ -84,3 +84,15 @@ export const deleteById = async (req: Request, res: Response) => {
   await db.none(`DELETE FROM planets WHERE id=$${id}`);
   res.status(201).json({ msg: "il pianeta è stato eliminato" });
 };
+
+export const createImage = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const filename = req.file?.path;
+
+  if (filename) {
+    db.none(`UPDATE planets SET image=$2 WHERE id=$1`, [id, filename]);
+    res.status(201).json({ msg: "Planet image uploaded successfully" });
+  } else {
+    res.status(400).json({ msg: "planet image failed to upload" });
+  }
+};
